@@ -2,7 +2,8 @@ package com.company;
 import java.util.Scanner; //imports required libraries
 import java.util.Arrays;
 public class Main {
-    private static int array[] = new int[10];   //initialises variables
+    private static int array[] = new int[10];  
+    //initialises variables
     public static int placeholder;
     public static int runtotal;
     public static int number;
@@ -36,7 +37,8 @@ public class Main {
             }
         }
     }
-    private static void userio(){  //used to get user inputs
+    //used to get user inputs
+    private static void userio(){ 
         int number;
         Scanner scaniInput = new Scanner(System.in);
         for (int i = 0; i < array.length; i++){
@@ -48,7 +50,8 @@ public class Main {
     private static void display(){  
         System.out.println(Arrays.toString(array));
     }
-    private static void mean(){   // finds the mean of the data
+     // finds the mean of the data
+    private static void mean(){  
         for (int s=0; s<array.length; s++){
             runtotal = runtotal + array[s];
         }
@@ -56,7 +59,8 @@ public class Main {
         System.out.print("Here are some cool stats" + '\n');
         System.out.print("The mean of your list is " + mean );
     }
-    private static void variance(){ // finds the variance of the data
+    // finds the variance of the data
+    private static void variance(){ 
         for (int v = 0; v < array.length; v++){
             difference = array[v] - mean;
             difference2 = difference*difference;
@@ -67,7 +71,8 @@ public class Main {
         double root = Math.sqrt(variance);
         System.out.print('\n' + "The standard deviation of your list is " + root);
     }
-    private static void largest(){   //outputs the largest value
+     //outputs the largest value
+    private static void largest(){  
         System.out.print('\n' + "The largest number in your list is " + array[0]);
     }
 }
